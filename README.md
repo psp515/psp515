@@ -70,11 +70,21 @@ public interface IHobby<TGame,TPrinter>
     List<TPrinter> Printers { get; }
     string SupportedFootballClub { get; }
 }
-
-public record Language(string Name, string CEFRLevel);
-public record ProgrammingLanguage(string Name, bool InterestedInFutureWork, string Description);
-public record Game(string Name);
-public record Work(string Company, string Position, string Length, short Year, string[] ProgrammingLanguagesInvolved);
-public record Printer(string Nmase, short BoughtInYear, string Opinion);
-
 ```
+```cs 
+public record Language(string Name, string CEFRLevel);
+```
+```cs
+public record ProgrammingLanguage(string Name, bool InterestedInFutureWork, string Description); 
+```
+```cs 
+public record Game(string Name);
+```
+```cs 
+public record Work(string Company, string Position, string Length, short Year, string[] ProgrammingLanguagesInvolved); 
+```
+```cs 
+public record Printer(string Nmase, short BoughtInYear, string Opinion);
+```
+
+
