@@ -45,12 +45,6 @@ public class Me : IMe<Language>, ICarrer<Work>, IHobby<Game, Printer>, IComputer
     
 }
 
-public record Language(string Name, string CEFRLevel);
-public record ProgrammingLanguage(string Name, bool InterestedInFutureWork, string Description);
-public record Game(string Name);
-public record Work(string Company, string Position, string Length, short Year, string[] ProgrammingLanguagesInvolved);
-public record Printer(string Nmase, short BoughtInYear, string Opinion);
-
 public interface IMe<TLanguage>
 {
     string Name { get; }
@@ -76,5 +70,11 @@ public interface IHobby<TGame,TPrinter>
     List<TPrinter> Printers { get; }
     string SupportedFootballClub { get; }
 }
+
+public record Language(string Name, string CEFRLevel);
+public record ProgrammingLanguage(string Name, bool InterestedInFutureWork, string Description);
+public record Game(string Name);
+public record Work(string Company, string Position, string Length, short Year, string[] ProgrammingLanguagesInvolved);
+public record Printer(string Nmase, short BoughtInYear, string Opinion);
 
 ```
