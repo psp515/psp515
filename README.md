@@ -2,7 +2,7 @@
 public class Me : IMe<Language>, ICarrer<Work>, IHobby<Game, Printer>, IComputerScience<ProgrammingLanguage>
 {
     public string Name => "Łukasz";
-    
+    public string Nick => "psp515";
     public string Surname => "Kolber";
     
     public List<Language> Languages => new List<Language> 
@@ -48,6 +48,7 @@ public class Me : IMe<Language>, ICarrer<Work>, IHobby<Game, Printer>, IComputer
 public interface IMe<TLanguage>
 {
     string Name { get; }
+    string Nick { get; }
     string Surname { get; }
     List<TLanguage> Languages { get; }
 }
