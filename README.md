@@ -25,7 +25,7 @@ public class Me : IMe<Language>, ICarrer<Work>, IHobby<Game, Printer>, IComputer
     	new ProgrammingLanguage("C#", true, "My first programming language, mostly used for Xamarin / .NET MAUI / console apps. I Really like it."),
         new ProgrammingLanguage("Python", true, "I met it a bit before studies and extended my knowledge on them."),
         new ProgrammingLanguage("C", false, "I met it on studies. I didn't enjoy writing in it. Yet it really helped to understand few things."),
-        new ProgrammingLanguage("C++", false, "I used it on my first intersip."),
+        new ProgrammingLanguage("C++", true, "I used it on my first intersip."),
     };
 
     public List<Game> FavouriteGames => new List<Game>
