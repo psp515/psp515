@@ -112,7 +112,8 @@ public interface IHobby<TGame, TPrinter>
 ```cs 
 public interface IMood
 {
-    bool IsHappy { get; set; } 
+    bool IsHappy { get; set; }
+    string Emoji { get; set; }
     string WhyIsHappy { get; set; } 
 }
 ```
