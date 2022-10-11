@@ -7,7 +7,7 @@ public class Me : Person<Language>, IAdditionalInformations, ICarrer<Work>, IHob
     public Me(IMood mood)
     {
         /* Try to guess ;D */
-        mood = Mood;
+        Mood = mood;
     }
 
     protected override string Name => "Łukasz";
