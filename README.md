@@ -2,7 +2,7 @@
 public class Me : Person<Language>, IAdditionalInformations, ICarrer<Work>, IHobby<Game, Printer>, IComputerScience<ProgrammingLanguage>
 {
 
-    private readonly IMood Mood;
+    public IMood Mood;
 
     public Me(IMood mood)
     {
