@@ -53,7 +53,7 @@ public class Me : Person<Language>, IAdditionalInformations, ICarrer<Work>, IHob
     {
         new ProgrammingLanguage("HTML/CSS/JS", InterestedInFutureWork:false, "Learning it on AGH UST Couse."),
         new ProgrammingLanguage("Java", InterestedInFutureWork:false, "Learning it on AGH UST Couse."),
-        new ProgrammingLanguage("Haskell", InterestedInFutureWork:true, "Learning it on AGH UST Couse.")
+        new ProgrammingLanguage("SQL", InterestedInFutureWork:true, "Learning it on AGH UST Couse.")
         new ProgrammingLanguage("Haskell", InterestedInFutureWork:false, "Learning it on AGH UST Couse.")
     };
 
