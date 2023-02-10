@@ -46,15 +46,16 @@ public class Me : Person<Language>, IAdditionalInformations, ICarrer<Work>, IHob
         new ProgrammingLanguage("C#", InterestedInFutureWork:true, "My first programming language, mostly used for Xamarin / .NET MAUI / console apps. I really like it."),
         new ProgrammingLanguage("Python", InterestedInFutureWork:true, "I met it a bit before studies and extended my knowledge on them."),
         new ProgrammingLanguage("C", InterestedInFutureWork:false, "I met it on studies. I didn't enjoy writing in it. Yet it really helped to understand few things."),
-        new ProgrammingLanguage("C++", InterestedInFutureWork:true, "I used it on my first intersip."),
+        new ProgrammingLanguage("C++", InterestedInFutureWork:true, "I used it on my first intersip. Fast with interesting concepts. The only downside is that it's quite old."),
+        new ProgrammingLanguage("HTML/CSS/JS", InterestedInFutureWork:false, "HTML and CSS but JavaScript (TypeScript), this language sucks dynamicly typed but much worse than python."),
+        new ProgrammingLanguage("Java", InterestedInFutureWork:false, "I didn't enjoy writing in it. Definitely worse than C#."),
+        new ProgrammingLanguage("SQL", InterestedInFutureWork:true, "Really cool. Simple way of storing dozen of data.")
+        new ProgrammingLanguage("Haskell", InterestedInFutureWork:false, "Tried a bit but I didn't like it.")
     };
 
-    public List<ProgrammingLanguage> LearingProgrammingLanguages => new List<ProgrammingLanguage>
+    public List<ProgrammingLanguage> EnchancingSkillsInProgrammingLanguages => new List<ProgrammingLanguage>
     {
-        new ProgrammingLanguage("HTML/CSS/JS", InterestedInFutureWork:false, "Learning it on AGH UST Couse."),
-        new ProgrammingLanguage("Java", InterestedInFutureWork:false, "Learning it on AGH UST Couse."),
-        new ProgrammingLanguage("SQL", InterestedInFutureWork:true, "Learning it on AGH UST Couse.")
-        new ProgrammingLanguage("Haskell", InterestedInFutureWork:false, "Learning it on AGH UST Couse.")
+        new ProgrammingLanguage("Python", InterestedInFutureWork:true, "Working on MicroPico project and PicoLamp."),
     };
 
     public List<Game> FavouriteGames => new List<Game>
