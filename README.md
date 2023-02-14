@@ -40,6 +40,11 @@ public class Me : Person<Language>, IAdditionalInformations, ICarrer<Work>, IHob
     {
         new Work("TECH Sterowniki", "Intern", "3 months", 2021, new string[]{"C++", "Python"})
     };
+    
+    public List<Project> Projects => new List<Project>()
+    {
+        new Project("My Printiverse", "Originator, App Developer", "3-2022" , "11-2022", new string[]{"C#"})
+    };
 
     public List<ProgrammingLanguage> ProgrammingLanguages => new List<ProgrammingLanguage>
     {
