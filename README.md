@@ -2,7 +2,8 @@
 Hello There 🖐
 </h3>
 
-<p align="center">
+
+<div align="center">
     <a href="https://www.linkedin.com/in/lukasz-psp515-kolber/">
         <img src="https://img.icons8.com/color/48/000000/linkedin.png" width="3%"/> 
     </a>
@@ -10,9 +11,9 @@ Hello There 🖐
         <img src="https://img.icons8.com/fluent/48/000000/gmail.png" width="3%"/> 
     </a>
     <a href="https://github.com/antonkomarev/github-profile-views-counter">
-        <img src="![](https://komarev.com/ghpvc/?username=psp515&color=green&style=flat&label=Visitors))"/>
+        <img src="https://komarev.com/ghpvc/?username=psp515&color=green&style=flat&label=Visitors" width="9%"/>
     </a>
-</p>
+</div>
 
 
 🤵 About Me
@@ -25,18 +26,18 @@ namespace psp515;
 public class Me
 {
 
-    public IMood Mood;
+    private IMood Mood;
 
     public Me(IMood mood)
     {
-        /* Try to guess ;D */
-        Mood = mood;
+        Mood = mood; /* Try to guess ;D */
     }
 
     public override string Introduce() => base.Introduce()+$"{Mood.Emoji}" ;
     
     public string University => "AGH University of Science and Technology";
     public string FieldOfStudy => "Computer Science";
+    
     protected string Name => "Łukasz";
     protected string Surname => "Kolber";
     public string Nick => "psp515";
@@ -95,7 +96,7 @@ public class Me
  📈 GitHub Stats 
 ---
 
-<div align="center">
+<div>
     <a href="https://github.com/anuraghazra/github-readme-stats">
   <img align="center" height="150px" src="https://github-readme-stats.vercel.app/api?username=psp515&count_private=true&show_icons=true&theme=dark" />
 </a>
