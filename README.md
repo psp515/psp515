@@ -1,8 +1,28 @@
+<h3 align="center">
+Hello There 🖐
+</h3>
+
+<p align="center">
+    <a href="https://www.linkedin.com/in/lukasz-psp515-kolber/">
+        <img src="https://img.icons8.com/color/48/000000/linkedin.png" width="3%"/> 
+    </a>
+    <a href="mailto:kolberu@gmail.com"> 
+        <img src="https://img.icons8.com/fluent/48/000000/gmail.png" width="3%"/> 
+    </a>
+    <a href="https://github.com/antonkomarev/github-profile-views-counter">
+        <img src="![](https://komarev.com/ghpvc/?username=psp515&color=green&style=flat&label=Visitors))"/>
+    </a>
+</p>
+
+
+🤵 About Me
+--- 
+
 ```cs
 
 namespace psp515;
 
-public class Me : Person<Language>, IAdditionalInformations, ICarrer<Work>, IHobby<Game, Printer>, IComputerScience<ProgrammingLanguage>
+public class Me
 {
 
     public IMood Mood;
@@ -13,71 +33,74 @@ public class Me : Person<Language>, IAdditionalInformations, ICarrer<Work>, IHob
         Mood = mood;
     }
 
-    #region Overrides
-
     public override string Introduce() => base.Introduce()+$"{Mood.Emoji}" ;
-
-    #endregion
-
-    protected override string Name => "Łukasz";
-    protected override string Surname => "Kolber";
+    
+    public string University => "AGH University of Science and Technology";
+    public string FieldOfStudy => "Computer Science";
+    protected string Name => "Łukasz";
+    protected string Surname => "Kolber";
     public string Nick => "psp515";
 
-    public string FavoriteMeal => "https://en.wikipedia.org/wiki/Lasagna";
-    public string FavoriteSong => "https://www.youtube.com/watch?v=xvFZjo5PgG0";
-
-    protected override List<Language> Languages => new List<Language>
+    protected List<Language> Languages => new List<Language>
     {
         new Language("pl", "C2"),
         new Language("en", "B2 / C1")
     };
-
-    public bool IsStudent => true;
-
-    public bool IsWorking => false;
-
-    public List<Work> Jobs => new List<Work>()
-    {
-        new Work("TECH Sterowniki", "Intern", "3 months", 2021, new string[]{"C++", "Python"})
-    };
-    
-    public List<Project> Projects => new List<Project>()
-    {
-        new Project("My Printiverse", "Originator, App Developer", "3-2022" , "11-2022", new string[]{"C#"})
-    };
-
-    public List<ProgrammingLanguage> ProgrammingLanguages => new List<ProgrammingLanguage>
-    {
-        new ProgrammingLanguage("C#", InterestedInFutureWork:true, "My first programming language, mostly used for Xamarin / .NET MAUI / console apps. I really like it."),
-        new ProgrammingLanguage("Python", InterestedInFutureWork:true, "I met it a bit before studies and extended my knowledge on them."),
-        new ProgrammingLanguage("C", InterestedInFutureWork:false, "I met it on studies. I didn't enjoy writing in it. Yet it really helped to understand few things."),
-        new ProgrammingLanguage("C++", InterestedInFutureWork:true, "I used it on my first intersip. Fast with interesting concepts. The only downside is that it's quite old."),
-        new ProgrammingLanguage("HTML/CSS/JS", InterestedInFutureWork:false, "HTML and CSS but JavaScript (TypeScript), this language sucks dynamicly typed but much worse than python."),
-        new ProgrammingLanguage("Java", InterestedInFutureWork:false, "I didn't enjoy writing in it. Definitely worse than C#."),
-        new ProgrammingLanguage("SQL", InterestedInFutureWork:true, "Really cool. Simple way of storing dozen of data.")
-        new ProgrammingLanguage("Haskell", InterestedInFutureWork:false, "Tried a bit but I didn't like it.")
-    };
-
-    public List<ProgrammingLanguage> EnchancingSkillsInProgrammingLanguages => new List<ProgrammingLanguage>
-    {
-        new ProgrammingLanguage("Python", InterestedInFutureWork:true, "Working on MicroPico project and PicoLamp."),
-    };
-
-    public List<Game> FavouriteGames => new List<Game>
-    {
-        new Game("Total War: ROME 2"),
-        new Game("Arma 3"),
-        new Game("Battlefield 1"),
-        new Game("Battlefield 4"),
-        new Game("The Witcher 3: Wild Hunt"),
-    };
-
-    public List<Printer> Printers3D => new List<Printer>
-    {
-        new Printer("Ender 5 Pro", 2020, "Cool printer for start, easy to understand and manage.")
-    };
-
-    public string SupportedFootballClub => "FC Barcelona";
-
 }
+
 ```
+
+🔧 Known Technologies & Tools
+--- 
+
+![](https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=c-sharp&logoColor=white&style=flat)
+![](https://img.shields.io/badge/Xamarin-3498DB?style=for-the-badge&logo=xamarin&logoColor=white&style=flat)
+![](https://img.shields.io/badge/.NET_MAUI-3498DB?style=for-the-badge&logo=maui&logoColor=white&style=flat)
+![](https://img.shields.io/badge/Python-14354C?style=for-the-badge&logo=python&logoColor=white&style=flat)
+![](https://img.shields.io/badge/MicroPython-14354C?style=for-the-badge&logo=micropython&logoColor=white&style=flat)
+![](https://img.shields.io/badge/SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white&style=flat)
+![](https://img.shields.io/badge/plSQL-F80000?style=for-the-badge&logo=Oracle&logoColor=white&style=flat)
+![](https://img.shields.io/badge/TSQL-239120?style=for-the-badge&logo=microsoft-sql-server&logoColor=white&style=flat)
+
+
+👶 Tested Technologies & Tools
+--- 
+
+![](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E&style=flat)
+![](https://img.shields.io/badge/CSS-239120?&style=for-the-badge&logo=css3&logoColor=white&style=flat)
+![](https://img.shields.io/badge/HTML-239120?style=for-the-badge&logo=html5&logoColor=white&style=flat)
+![](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white&style=flat)
+![](https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white&style=flat)
+![](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white&style=flat)
+![](https://img.shields.io/badge/Haskell-0175C2?style=for-the-badge&logo=haskell&logoColor=white&style=flat)
+
+
+🎓 Extending Knowledge
+---
+
+![](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white&style=flat)
+![](https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white&style=flat)
+![](https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white&style=flat)  
+
+
+🏆 Planning To Test / Willing to Learn
+--- 
+
+![](https://img.shields.io/badge/Microsoft_Azure-0089D6?style=for-the-badge&logo=microsoft-azure&logoColor=white&style=flat)
+![](https://img.shields.io/badge/Unity-100000?style=for-the-badge&logo=unity&logoColor=white&style=flat)
+![](https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white&style=flat)
+![](https://img.shields.io/badge/Flutter-239120?style=for-the-badge&logo=flutter&logoColor=white&style=flat)  
+
+
+ 📈 GitHub Stats 
+---
+
+<div align="center">
+    <a href="https://github.com/anuraghazra/github-readme-stats">
+  <img align="center" height="200px" src="https://github-readme-stats.vercel.app/api?username=psp515&count_private=true&show_icons=true&theme=dark" />
+</a>
+<a href="https://github.com/anuraghazra/convoychat">
+  <img align="center" height="200px" src="https://github-readme-stats.vercel.app/api/top-langs/?username=psp515&layout=compact&theme=dark" />
+</a>
+</div>
+
