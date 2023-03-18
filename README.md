@@ -97,10 +97,10 @@ public class Me
 
 <div align="center">
     <a href="https://github.com/anuraghazra/github-readme-stats">
-  <img align="center" height="200px" src="https://github-readme-stats.vercel.app/api?username=psp515&count_private=true&show_icons=true&theme=dark" />
+  <img align="center" height="150px" src="https://github-readme-stats.vercel.app/api?username=psp515&count_private=true&show_icons=true&theme=dark" />
 </a>
 <a href="https://github.com/anuraghazra/convoychat">
-  <img align="center" height="200px" src="https://github-readme-stats.vercel.app/api/top-langs/?username=psp515&layout=compact&theme=dark" />
+  <img align="center" height="150px" src="https://github-readme-stats.vercel.app/api/top-langs/?username=psp515&layout=compact&theme=dark" />
 </a>
 </div>
 
