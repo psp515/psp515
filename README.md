@@ -62,7 +62,8 @@ public class Me
 ![](https://img.shields.io/badge/SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white&style=flat)
 ![](https://img.shields.io/badge/plSQL-F80000?style=for-the-badge&logo=Oracle&logoColor=white&style=flat)
 ![](https://img.shields.io/badge/TSQL-239120?style=for-the-badge&logo=microsoft-sql-server&logoColor=white&style=flat)
-
+![](https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white&style=flat)
+![](https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white&style=flat)  
 
 👶 Tested Technologies & Tools
 --- 
@@ -74,21 +75,20 @@ public class Me
 ![](https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white&style=flat)
 ![](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white&style=flat)
 ![](https://img.shields.io/badge/Haskell-0175C2?style=for-the-badge&logo=haskell&logoColor=white&style=flat)
+![](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white&style=flat)
 
 
-🎓 Extending Knowledge
+🎓 Extending Knowledge / Testing
 ---
 
-![](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white&style=flat)
-![](https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white&style=flat)
-![](https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white&style=flat)  
-
+![](https://img.shields.io/badge/Entity_Framework-0089D6?style=for-the-badge&logo=dotnet&logoColor=white&style=flat)
 
 🏆 Planning To Test / Willing to Learn
 --- 
 
 ![](https://img.shields.io/badge/Microsoft_Azure-0089D6?style=for-the-badge&logo=microsoft-azure&logoColor=white&style=flat)
 ![](https://img.shields.io/badge/Unity-100000?style=for-the-badge&logo=unity&logoColor=white&style=flat)
+![](https://img.shields.io/badge/ASP.NET_Core-0089D6?style=for-the-badge&logo=dotnet&logoColor=white&style=flat)
 ![](https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white&style=flat)
 ![](https://img.shields.io/badge/Flutter-239120?style=for-the-badge&logo=flutter&logoColor=white&style=flat)  
 
@@ -101,7 +101,7 @@ public class Me
   <img align="center" height="150px" src="https://github-readme-stats.vercel.app/api?username=psp515&count_private=true&show_icons=true&theme=dark" />
 </a>
 <a href="https://github.com/anuraghazra/convoychat">
-  <img align="center" height="150px" src="https://github-readme-stats.vercel.app/api/top-langs/?username=psp515&layout=compact&theme=dark" />
+  <img align="center" height="150px" src="https://github-readme-stats.vercel.app/api/top-langs/?username=psp515&layout=compact&theme=dark&langs_count=7" />
 </a>
 </div>
 
