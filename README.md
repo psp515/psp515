@@ -90,6 +90,7 @@ public class Me
 ![](https://img.shields.io/badge/Unity-100000?style=for-the-badge&logo=unity&logoColor=white&style=flat)
 ![](https://img.shields.io/badge/ASP.NET_Core-0089D6?style=for-the-badge&logo=dotnet&logoColor=white&style=flat)
 ![](https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white&style=flat)
+![](https://img.shields.io/badge/WPF-0089D6?style=for-the-badge&logo=dotnet&logoColor=white&style=flat)
 ![](https://img.shields.io/badge/Flutter-239120?style=for-the-badge&logo=flutter&logoColor=white&style=flat)  
 
 
