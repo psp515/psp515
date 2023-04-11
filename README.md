@@ -56,7 +56,7 @@ public class Me
 
 ![](https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=c-sharp&logoColor=white&style=flat)
 ![](https://img.shields.io/badge/Xamarin-3498DB?style=for-the-badge&logo=xamarin&logoColor=white&style=flat)
-![](https://img.shields.io/badge/.NET_MAUI-3498DB?style=for-the-badge&logo=maui&logoColor=white&style=flat)
+![](https://img.shields.io/badge/.NET_MAUI-3498DB?style=for-the-badge&logo=maui&logoColor=white&style=flat&logo=dotnet)
 ![](https://img.shields.io/badge/Python-14354C?style=for-the-badge&logo=python&logoColor=white&style=flat)
 ![](https://img.shields.io/badge/MicroPython-14354C?style=for-the-badge&logo=micropython&logoColor=white&style=flat)
 ![](https://img.shields.io/badge/SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white&style=flat)
@@ -100,10 +100,10 @@ public class Me
 
 <div>
     <a href="https://github.com/anuraghazra/github-readme-stats">
-  <img align="center" height="150px" src="https://github-readme-stats.vercel.app/api?username=psp515&count_private=true&show_icons=true&theme=dark" />
+  <img align="center" height="150px" src="https://github-readme-stats-omega-peach.vercel.app/api?username=psp515&count_private=true&show_icons=true&theme=dark" />
 </a>
 <a href="https://github.com/anuraghazra/convoychat">
-  <img align="center" height="150px" src="https://github-readme-stats.vercel.app/api/top-langs/?username=psp515&layout=compact&theme=dark&langs_count=7" />
+  <img align="center" height="150px" src="https://github-readme-stats-omega-peach.vercel.app/api/top-langs/?username=psp515&layout=compact&theme=dark&langs_count=7" />
 </a>
 </div>
 
