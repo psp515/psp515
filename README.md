@@ -82,6 +82,7 @@ public class Me
 ---
 
 ![](https://img.shields.io/badge/Entity_Framework-0089D6?style=for-the-badge&logo=dotnet&logoColor=white&style=flat)
+![](https://img.shields.io/badge/.NET_Web_API-0089D6?style=for-the-badge&logo=dotnet&logoColor=white&style=flat)
 
 🏆 Planning To Test / Willing to Learn
 --- 
