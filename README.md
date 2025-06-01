@@ -23,30 +23,68 @@ Hello There 🖐
 
 namespace psp515;
 
-public class Me
+public class Me : Person, IStudent, IIntroduce, ILanguages, IExperience
 {
-
     private IMood Mood;
 
     public Me(IMood mood)
     {
-        Mood = mood; /* Try to guess ;D */
+        // Try to guess ;D 
+        Mood = mood; 
     }
 
     public override string Introduce() => base.Introduce()+$"{Mood.Emoji}" ;
     
-    public string University => "AGH University of Science and Technology";
-    public string FieldOfStudy => "Computer Science";
-    
     protected string Name => "Łukasz";
+
     protected string Surname => "Kolber";
+
     public string Nick => "psp515";
 
-    protected List<Language> Languages => new List<Language>
-    {
-        new Language("pl", "C2"),
+    protected List<Experience> Experiences => 
+    [
+        new Experience(
+            "Software Engineer Intern", 
+            "Tech Sterowniki", 
+            "2021-06", 
+            "2021-08", 
+            "STM32, C++."),
+
+        new Experience(
+            "Software Engineer Intern", 
+            "Dassault Systèmes", 
+            "2023-07", 
+            "2024-10", 
+            "C#, .NET, Docker, Cloud, Jenkins"),
+
+        new Experience(
+            "Software Engineer", 
+            "Dassault Systèmes", 
+            "2024-24-10", 
+            "----------", 
+            "C#, .NET, Docker, Cloud, Jenkins")
+    ];
+
+    protected List<Degree> Universities =>
+    [
+        new Degree(
+            "AGH University of Krakow", 
+            "Computer Science", 
+            "Bachelor's Degree", 
+            "2021-2025"),
+
+        new Degree("
+            Warsaw University of Technology", 
+            "Computer Science", 
+            "Master's Degree", 
+            "2025-...")
+    ];
+
+    protected List<Language> Languages =>
+    [
+        new Language("pl", "Native"),
         new Language("en", "B2 / C1")
-    };
+    ];
 }
 
 ```
