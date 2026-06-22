@@ -147,7 +147,7 @@ public class Me : Person, IStudent, IIntroduce, ILanguages, IExperience
   <img align="center" height="150px" src="https://github-readme-stats.vercel.app/api?username=psp515&count_private=true&show_icons=true&theme=dark" />
 </a>
 <a href="https://github.com/anuraghazra/convoychat">
-  <img align="center" height="150px" src="https://github-readme-stats.vercel.app/api/top-langs/?username=psp515&layout=compact&theme=dark&langs_count=7" />
-</a>
+    <img align="center" height="150px" src="https://github-readme-stats.vercel.app/api/top-langs/?username=psp515&layout=compact&theme=dark&langs_count=7&hide=jupyter%20notebook,html" />
+</a> 
 </div>
 
