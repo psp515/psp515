@@ -1,0 +1,54 @@
+---
+import type { Lang } from "../data/types";
+import { eyebrow, heroLead, heroBlink, lede, status, stackGroups, accounts } from "../data/profile";
+import { account as accountIcons } from "../data/icons";
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+---
+
+<header class="hero">
+  <p class="eyebrow">{eyebrow[lang]}</p>
+  <h1>
+    Łukasz Kolber<span class="dim">,</span><br />
+    <span class="dim">{heroLead[lang]}</span> <span class="blink">{heroBlink[lang]}</span>
+  </h1>
+  <p class="lede">{lede[lang]}</p>
+
+  <div class="chipset">
+    <span class="set-label">{lang === "pl" ? "Stack" : "Stack"}</span>
+    <div class="groups">
+      {stackGroups.map((g) => (
+        <div class="grp" data-c={g.color}>
+          <span class="grp-name">{g.name[lang]}</span>
+          <div class="chiprow">
+            {g.items.map((item) => <span class="chip">{item}</span>)}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+
+  <div class="chipset">
+    <span class="set-label">{lang === "pl" ? "Kontakt" : "Elsewhere"}</span>
+    <div class="chiprow">
+      {accounts.map((a) => (
+        <a class="chip acct" href={a.href}>
+          <svg viewBox="0 0 24 24" aria-hidden="true" set:html={accountIcons[a.icon as keyof typeof accountIcons]} />
+          {a.label}
+        </a>
+      ))}
+    </div>
+  </div>
+
+  <dl class="status">
+    {status.map((s) => (
+      <div>
+        <dt>{s.dt[lang]}</dt>
+        <dd>{s.dd[lang]}</dd>
+      </div>
+    ))}
+  </dl>
+</header>

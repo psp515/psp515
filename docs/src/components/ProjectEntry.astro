@@ -1,0 +1,38 @@
+---
+import type { Lang, Project } from "../data/types";
+
+interface Props {
+  project: Project;
+  lang: Lang;
+}
+const { project, lang } = Astro.props;
+---
+<div class:list={["row", { right: project.side === "right" }]} data-kind="project">
+  <span class="dot"></span>
+  <div class:list={["card", { framed: !project.minimal }]}>
+    <div class="kick-row">
+      <span class="kicker">{project.kicker[lang]}</span>
+      {project.group && (
+        <span class="badge">{lang === "pl" ? "projekt zespołowy" : "group project"}</span>
+      )}
+    </div>
+    <h3>{project.title}</h3>
+    <p class="org">{project.org[lang]}</p>
+    <p class="text">{project.text[lang]}</p>
+    {project.quote && <p class="quote">{project.quote[lang]}</p>}
+    {project.shot && (
+      <div class="shot" aria-hidden="true">
+        {project.shot.bars.map((w, i) => (
+          <div class:list={["bar", { lit: i === 0 }]} style={`width:${w}%`}></div>
+        ))}
+        <p class="caption">{project.shot.caption[lang]}</p>
+      </div>
+    )}
+    <div class="chiprow">
+      {project.chips.map((c) => <span class="chip">{c}</span>)}
+    </div>
+    <div class="links">
+      {project.links.map((l) => <a href={l.href}>{l.label[lang]}</a>)}
+    </div>
+  </div>
+</div>

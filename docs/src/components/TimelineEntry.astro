@@ -1,0 +1,29 @@
+---
+import type { Lang, TimelineEntry } from "../data/types";
+
+interface Props {
+  entry: TimelineEntry;
+  lang: Lang;
+}
+const { entry, lang } = Astro.props;
+const cardClass = entry.framed ? "card framed" : "card";
+---
+
+<div class:list={["row", { right: entry.side === "right" }]} data-kind={entry.kind}>
+  <span class="dot"></span>
+  <div class={cardClass}>
+    <div class="head">
+      <span class="topic">{entry.topic}</span>
+      <span class="when">{entry.when[lang]}</span>
+    </div>
+    <h3>{entry.title[lang]}</h3>
+    {entry.org[lang] && <p class="org">{entry.org[lang]}</p>}
+    <p class="text">{entry.text[lang]}</p>
+    {entry.quote && <p class="quote">{entry.quote[lang]}</p>}
+    {entry.chips && (
+      <div class="chiprow">
+        {entry.chips.map((c) => <span class="chip">{c}</span>)}
+      </div>
+    )}
+  </div>
+</div>

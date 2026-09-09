@@ -1,0 +1,41 @@
+---
+import "../styles/global.css";
+import Nav from "../components/Nav.astro";
+import Backdrop from "../components/Backdrop.astro";
+import Footer from "../components/Footer.astro";
+import type { Lang } from "../data/types";
+
+interface Props {
+  lang: Lang;
+  current: string;
+  title: string;
+  description: string;
+}
+const { lang, current, title, description } = Astro.props;
+---
+
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="icon" href={`${import.meta.env.BASE_URL}favicon.svg`} />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap"
+    />
+  </head>
+  <body>
+    <Nav lang={lang} current={current} />
+    <div class="shell">
+      <Backdrop />
+      <slot />
+      <Footer lang={lang} />
+    </div>
+  </body>
+</html>

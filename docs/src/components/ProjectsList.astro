@@ -1,0 +1,35 @@
+---
+import type { Lang } from "../data/types";
+import { projects } from "../data/projects";
+import { projectsHead } from "../data/profile";
+import ProjectEntry from "./ProjectEntry.astro";
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+
+let lastYear: number | null = null;
+---
+
+<div class="page-head sec-head">
+  <h2>{projectsHead.title[lang]}</h2>
+  <p>{projectsHead.sub[lang]}</p>
+</div>
+
+<div class="spine proj">
+  {projects.map((p) => {
+    const showYear = p.year !== lastYear;
+    lastYear = p.year;
+    return (
+      <>
+        {showYear && (
+          <div class:list={["ymark", { "is-now": p.isNow }]}>
+            <span>{p.year}</span>
+          </div>
+        )}
+        <ProjectEntry project={p} lang={lang} />
+      </>
+    );
+  })}
+</div>

@@ -1,0 +1,217 @@
+---
+import type { Lang } from "../data/types";
+import { studiesHead } from "../data/profile";
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+
+const strings = {
+  loading: { en: "reading repositories from GitHub…", pl: "czytam repozytoria z GitHuba…" },
+  live: { en: "live from the GitHub API", pl: "na żywo z API GitHuba" },
+  repoWord: { en: "repositories", pl: "repozytoriów" },
+  noDescription: { en: "no description", pl: "brak opisu" },
+  errorTitle: { en: "GitHub did not answer", pl: "GitHub nie odpowiedział" },
+  errorBody: {
+    en: "This list is read live from the GitHub API, so there is nothing to show until GitHub responds. The repositories themselves are fine — only this page could not reach them.",
+    pl: "Ta lista jest czytana na żywo z API GitHuba, więc nie ma czego pokazać, dopóki GitHub nie odpowie. Repozytoria są całe — to tylko ta strona do nich nie dotarła.",
+  },
+  retry: { en: "Try again", pl: "Spróbuj ponownie" },
+  openGithub: { en: "open on github ↗", pl: "otwórz na githubie ↗" },
+  repoLink: { en: "repo ↗", pl: "repo ↗" },
+  rateLimited: {
+    en: "rate limit — the GitHub API allows 60 requests per hour per address",
+    pl: "limit zapytań — GitHub API pozwala na 60 zapytań na godzinę z jednego adresu",
+  },
+  httpError: { en: "GitHub API responded with HTTP", pl: "GitHub API odpowiedziało kodem HTTP" },
+  noRepos: {
+    en: "no repository named Studies-* came back",
+    pl: "żadne repozytorium o nazwie Studies-* nie wróciło z API",
+  },
+};
+
+const LANG_COLORS: Record<string, string> = {
+  Python: "#3572A5",
+  Java: "#b07219",
+  C: "#8b949e",
+  "C++": "#f34b7d",
+  TypeScript: "#3178c6",
+  TSQL: "#e38c00",
+  "Jupyter Notebook": "#DA5B0B",
+  "C#": "#178600",
+  JavaScript: "#f1e05a",
+  HTML: "#e34c26",
+};
+---
+
+<div class="page-head sec-head">
+  <h2>{studiesHead.title[lang]}</h2>
+  <p>{studiesHead.sub[lang]}</p>
+</div>
+
+<p class="feed" id="feed" data-state="loading">
+  <i class="led"></i>
+  <span id="feed-text">{strings.loading[lang]}</span>
+</p>
+
+<ul class="repos" id="repos"></ul>
+<div id="repos-empty"></div>
+
+<script define:vars={{ lang, strings, LANG_COLORS }}>
+  var list = document.getElementById("repos");
+  var slot = document.getElementById("repos-empty");
+  var feed = document.getElementById("feed");
+  var feedText = document.getElementById("feed-text");
+
+  function t(entry) {
+    return entry[lang] || entry.en;
+  }
+
+  function pretty(name) {
+    return name
+      .replace(/^Studies-/, "")
+      .replace(/([a-z0-9])([A-Z])/g, "$1 $2")
+      .replace(/^./, function (c) { return c.toUpperCase(); });
+  }
+
+  function setFeed(state, text) {
+    feed.dataset.state = state;
+    feedText.textContent = text;
+  }
+
+  function skeletons(n) {
+    list.textContent = "";
+    slot.textContent = "";
+    for (var i = 0; i < n; i++) {
+      var li = document.createElement("li");
+      li.className = "repo skel";
+      li.setAttribute("aria-hidden", "true");
+      [58, 34, 92, 76].forEach(function (w, j) {
+        var ln = document.createElement("div");
+        ln.className = "ln";
+        ln.style.width = w + "%";
+        if (j === 0) ln.style.height = "13px";
+        li.appendChild(ln);
+      });
+      list.appendChild(li);
+    }
+  }
+
+  function render(repos) {
+    list.textContent = "";
+    slot.textContent = "";
+    repos
+      .slice()
+      .sort(function (a, b) { return (b.created_at || "").localeCompare(a.created_at || ""); })
+      .forEach(function (r) {
+        var li = document.createElement("li");
+        li.className = "repo";
+
+        var h3 = document.createElement("h3");
+        h3.textContent = pretty(r.name);
+        li.appendChild(h3);
+
+        var slug = document.createElement("span");
+        slug.className = "slug";
+        slug.textContent = r.name;
+        li.appendChild(slug);
+
+        var p = document.createElement("p");
+        if (r.description) {
+          p.textContent = r.description;
+        } else {
+          p.className = "none";
+          p.textContent = t(strings.noDescription);
+        }
+        li.appendChild(p);
+
+        var foot = document.createElement("footer");
+        if (r.language) {
+          var lg = document.createElement("span");
+          lg.className = "lang";
+          var dot = document.createElement("i");
+          dot.style.setProperty("--lc", LANG_COLORS[r.language] || "#6b7383");
+          lg.appendChild(dot);
+          lg.appendChild(document.createTextNode(r.language));
+          foot.appendChild(lg);
+        }
+        var a = document.createElement("a");
+        a.href = "https://github.com/psp515/" + r.name;
+        a.textContent = t(strings.repoLink);
+        a.style.marginLeft = r.language ? ".7rem" : "0";
+        foot.appendChild(a);
+
+        var yr = document.createElement("span");
+        yr.className = "yr";
+        yr.textContent = (r.created_at || "").slice(0, 4);
+        foot.appendChild(yr);
+
+        li.appendChild(foot);
+        list.appendChild(li);
+      });
+  }
+
+  function failure(reason) {
+    list.textContent = "";
+    slot.textContent = "";
+
+    var box = document.createElement("div");
+    box.className = "empty";
+
+    var h = document.createElement("h3");
+    h.textContent = t(strings.errorTitle);
+    box.appendChild(h);
+
+    var p = document.createElement("p");
+    p.textContent = t(strings.errorBody);
+    box.appendChild(p);
+
+    var why = document.createElement("p");
+    why.className = "why";
+    why.textContent = reason;
+    box.appendChild(why);
+
+    var actions = document.createElement("div");
+    actions.className = "actions";
+
+    var retry = document.createElement("button");
+    retry.type = "button";
+    retry.textContent = t(strings.retry);
+    retry.addEventListener("click", loadStudies);
+    actions.appendChild(retry);
+
+    var open = document.createElement("a");
+    open.className = "chip acct";
+    open.href = "https://github.com/psp515?tab=repositories&q=Studies-";
+    open.textContent = t(strings.openGithub);
+    actions.appendChild(open);
+
+    box.appendChild(actions);
+    slot.appendChild(box);
+  }
+
+  function loadStudies() {
+    skeletons(6);
+    setFeed("loading", t(strings.loading));
+
+    fetch("https://api.github.com/users/psp515/repos?per_page=100&sort=created")
+      .then(function (res) {
+        if (res.status === 403) throw new Error(t(strings.rateLimited));
+        if (!res.ok) throw new Error(t(strings.httpError) + " " + res.status);
+        return res.json();
+      })
+      .then(function (all) {
+        var repos = all.filter(function (r) { return r.name.indexOf("Studies-") === 0; });
+        if (!repos.length) throw new Error(t(strings.noRepos));
+        render(repos);
+        setFeed("live", t(strings.live) + " · " + repos.length + " " + t(strings.repoWord));
+      })
+      .catch(function (err) {
+        setFeed("error", t(strings.errorTitle));
+        failure(String((err && err.message) || err));
+      });
+  }
+
+  loadStudies();
+</script>

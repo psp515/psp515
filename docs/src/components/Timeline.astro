@@ -1,0 +1,37 @@
+---
+import type { Lang } from "../data/types";
+import { timeline } from "../data/timeline";
+import { timelineHead } from "../data/profile";
+import TimelineEntry from "./TimelineEntry.astro";
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+
+let lastYear: number | null = null;
+---
+
+<section>
+  <div class="sec-head">
+    <h2>{timelineHead.title[lang]}</h2>
+    <p>{timelineHead.sub[lang]}</p>
+  </div>
+
+  <div class="spine">
+    {timeline.map((entry) => {
+      const showYear = entry.year !== lastYear;
+      lastYear = entry.year;
+      return (
+        <>
+          {showYear && (
+            <div class:list={["ymark", { "is-now": entry.isNow }]}>
+              <span>{entry.year}</span>
+            </div>
+          )}
+          <TimelineEntry entry={entry} lang={lang} />
+        </>
+      );
+    })}
+  </div>
+</section>

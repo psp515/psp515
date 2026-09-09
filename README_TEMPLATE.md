@@ -1,85 +1,81 @@
-<div align="center">
-  
-  <h1> Read Me Templates </h1>
-  <p> Template Template, Template Template. </p>
-  
-  <div>
-    <a href="">
-      <img src="https://img.shields.io/github/last-commit/psp515/ReadMeTemplate" alt="last update" />
-    </a>
-    <a href="https://github.com/psp515/ReadMeTemplate/network/members">
-      <img src="https://img.shields.io/github/forks/psp515/ReadMeTemplate" alt="forks" />
-    </a>
-    <a href="https://github.com/psp515/ReadMeTemplate/stargazers">
-      <img src="https://img.shields.io/github/stars/psp515/ReadMeTemplate" alt="stars" />
-    </a>
-    <a href="https://github.com/psp515/ReadMeTemplate/issues/">
-      <img src="https://img.shields.io/github/issues/psp515/ReadMeTemplate" alt="open issues" />
-    </a>
-    <a href="https://github.com/psp515/ReadMeTemplate/blob/master/LICENSE">
-      <img src="https://img.shields.io/github/license/psp515/ReadMeTemplate" alt="license" />
-    </a>
-  </div>
-</div>  
+<!--
+  README template — psp515
+  ------------------------
+  Rule: the README is a landing card, not a manual. Keep it under ~60 lines.
+  Anything longer than a paragraph goes to docs/ (see "Docs" below) and is
+  linked from here.
 
-<br/>
-
-### About The Project
-
-Template for github readmes.
-
-
-### Built With
-
-![](https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=c-sharp&logoColor=white&style=flat)
-![](https://img.shields.io/badge/Xamarin-3498DB?style=for-the-badge&logo=xamarin&logoColor=white&style=flat)
-![](https://img.shields.io/badge/.NET_MAUI-3498DB?style=for-the-badge&logo=maui&logoColor=white&style=flat)
-![](https://img.shields.io/badge/Python-14354C?style=for-the-badge&logo=python&logoColor=white&style=flat)
-![](https://img.shields.io/badge/MicroPython-14354C?style=for-the-badge&logo=micropython&logoColor=white&style=flat)
-![](https://img.shields.io/badge/SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white&style=flat)
-![](https://img.shields.io/badge/plSQL-F80000?style=for-the-badge&logo=Oracle&logoColor=white&style=flat)
-![](https://img.shields.io/badge/TSQL-239120?style=for-the-badge&logo=microsoft-sql-server&logoColor=white&style=flat)
-![](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E&style=flat)
-![](https://img.shields.io/badge/CSS-239120?&style=for-the-badge&logo=css3&logoColor=white&style=flat)
-![](https://img.shields.io/badge/HTML-239120?style=for-the-badge&logo=html5&logoColor=white&style=flat)
-![](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white&style=flat)
-![](https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white&style=flat)
-![](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white&style=flat)
-![](https://img.shields.io/badge/Haskell-0175C2?style=for-the-badge&logo=haskell&logoColor=white&style=flat)
-![](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white&style=flat)
-![](https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white&style=flat)
-![](https://img.shields.io/badge/Unity-100000?style=for-the-badge&logo=unity&logoColor=white&style=flat)
-![](https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white&style=flat)
-![](https://img.shields.io/badge/Flutter-239120?style=for-the-badge&logo=flutter&logoColor=white&style=flat)
-![](https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white&style=flat)
-![](https://img.shields.io/badge/Microsoft_Azure-0089D6?style=for-the-badge&logo=microsoft-azure&logoColor=white&style=flat)  
-
-### Getting started. 
-
-If it's necesary.
-
-### Usage 
-
-Template.
-
-### Roadmap 
-
-Template.
-
-### License
-
-Distributed under the MIT License. See `LICENSE.txt` for more information.
-
-### Contact
+  Fill in: {{REPO}} {{TAGLINE}} {{ONE_PARAGRAPH}} {{RUN_CMD}}
+  Owner is psp515 throughout. Delete any section that has nothing to say —
+  an empty section is worse than a missing one.
+-->
 
 <div align="center">
-  <a href="https://www.linkedin.com/in/lukasz-psp515-kolber/">
-    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
-  </a>
-  <a href="https://twitter.com/psp515">
-    <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" alt="Twitter" />
-  </a>
-  <a href="[https://github.com/xramzesx](https://github.com/psp515)">
-    <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt="git" />
-  </a>
+
+# {{REPO}}
+
+{{TAGLINE}}
+
+[![last commit](https://img.shields.io/github/last-commit/psp515/{{REPO}})](https://github.com/psp515/{{REPO}}/commits)
+[![stars](https://img.shields.io/github/stars/psp515/{{REPO}})](https://github.com/psp515/{{REPO}}/stargazers)
+[![issues](https://img.shields.io/github/issues/psp515/{{REPO}})](https://github.com/psp515/{{REPO}}/issues)
+[![license](https://img.shields.io/github/license/psp515/{{REPO}})](LICENSE)
+
+<!-- Docs site, only once it exists. Otherwise delete this line. -->
+[**Docs →**](https://psp515.github.io/{{REPO}}/)
+
+</div>
+
+## What it is
+
+{{ONE_PARAGRAPH}} <!-- 2–4 sentences. What it does, who it's for, why it exists. -->
+
+Built with:
+![](https://img.shields.io/badge/C%23-239120?style=flat&logo=c-sharp&logoColor=white)
+![](https://img.shields.io/badge/.NET-512BD4?style=flat&logo=dotnet&logoColor=white)
+![](https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white)
+<!-- 3–6 badges, the ones a reader actually needs to recognise. Not a résumé. -->
+
+## Quick start
+
+```
+git clone https://github.com/psp515/{{REPO}}.git
+cd {{REPO}}
+{{RUN_CMD}}
+```
+
+Anything beyond this — prerequisites, configuration, environment variables —
+lives in [docs/getting-started.md](docs/getting-started.md).
+
+## Docs
+
+| | |
+|---|---|
+| [Getting started](docs/getting-started.md) | Install, configure, run. |
+| [Usage](docs/usage.md) | Commands, API, examples. |
+| [Architecture](docs/architecture.md) | How it is put together, and why. |
+| [Roadmap](docs/roadmap.md) | What is planned, what is dropped. |
+
+<!--
+  Two ways to run docs/, pick one per repo:
+
+  1. Plain Markdown (default) — docs/*.md, links above resolve on GitHub.
+     Zero setup. Use this unless the project needs more.
+
+  2. Astro site — same as psp515/psp515: docs/ is an Astro project deployed
+     to GitHub Pages by .github/workflows/deploy-docs.yml. Add the
+     "Docs →" link at the top and point the table rows at the live URLs.
+
+  If a section has no docs page, drop its row instead of linking a stub.
+-->
+
+## License
+
+MIT — see [LICENSE](LICENSE).
+
+---
+
+<div align="center">
+  <a href="https://github.com/psp515"><img src="https://img.shields.io/badge/GitHub-100000?style=flat&logo=github&logoColor=white" alt="GitHub" /></a>
+  <a href="https://www.linkedin.com/in/lukasz-psp515-kolber/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
 </div>

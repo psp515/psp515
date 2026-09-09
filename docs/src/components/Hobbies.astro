@@ -1,0 +1,32 @@
+---
+import type { Lang } from "../data/types";
+import { hobbies } from "../data/hobbies";
+import { offHoursHead } from "../data/profile";
+import { hobby as hobbyIcons } from "../data/icons";
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+---
+
+<section>
+  <div class="sec-head">
+    <h2>{offHoursHead.title[lang]}</h2>
+    <p>{offHoursHead.sub[lang]}</p>
+  </div>
+  <ul class="hobbies">
+    {hobbies.map((h) => {
+      const icon = hobbyIcons[h.icon as keyof typeof hobbyIcons];
+      return (
+        <li>
+          <svg viewBox={icon.viewBox} aria-hidden="true" set:html={icon.body} />
+          <div>
+            <h3>{h.title[lang]}</h3>
+            <p>{h.text[lang]}</p>
+          </div>
+        </li>
+      );
+    })}
+  </ul>
+</section>

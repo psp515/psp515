@@ -1,0 +1,15 @@
+---
+import type { Lang } from "../data/types";
+import { footer } from "../data/profile";
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const year = new Date().getFullYear();
+---
+
+<footer class="site">
+  <span>© {year} Łukasz Kolber</span>
+  <span>{footer.note[lang]}</span>
+</footer>
