@@ -26,6 +26,12 @@ jobs:
         with:
           path: ./docs
           node-version: 22
+        env:
+          # Serving from https://psp515.github.io/psp515/ (project pages),
+          # not a custom domain at root — Astro needs the real subpath baked
+          # into every asset/nav URL. Drop this once a custom domain is
+          # wired up in front of Pages (see astro.config.mjs).
+          BASE_PATH: /psp515
 
   deploy:
     needs: build
