@@ -120,14 +120,13 @@ color (`work` / `edu` / `project` / `life` — see the palette in
 
 ## Routing / base path
 
-`astro.config.mjs` reads `BASE_PATH` from the environment; it defaults to
-`"/"` because the intended deploy is a custom domain (via Cloudflare) in
-front of GitHub Pages, serving from the root. **Only** set
-`BASE_PATH=/psp515` if this ever needs to serve as raw GitHub Pages from
-`psp515.github.io/psp515` instead. Don't hardcode path prefixes in
-components — always go through `import.meta.env.BASE_URL` +
-`withBase()` from `src/lib/paths.ts`, or a page/nav link will silently break
-under whichever base isn't currently configured.
+`astro.config.mjs` sets `base: "/"` and `site: "https://psp515.com"` — the
+site is served at the apex of the custom domain (`docs/public/CNAME`), so
+every path is root-relative. If this ever has to serve from a subpath again
+(e.g. raw GitHub Pages at `psp515.github.io/psp515`), change `base` there
+and nothing else. Don't hardcode path prefixes in components — always go
+through `import.meta.env.BASE_URL` + `withBase()` from `src/lib/paths.ts`,
+or a page/nav link will silently break if `base` changes.
 
 ## Deploy
 

@@ -8,7 +8,7 @@ Kraków · .NET · Software Engineer
 
 <div align="center">
 
-[![Page](https://img.shields.io/badge/psp515.github.io-0B1120?style=flat&logo=astro&logoColor=white)](https://psp515.github.io/psp515/)
+[![Page](https://img.shields.io/badge/psp515.com-0B1120?style=flat&logo=astro&logoColor=white)](https://psp515.com)
 [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/psp515)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/lukasz-psp515-kolber/)
 [![Thingiverse](https://img.shields.io/badge/Thingiverse-248BFB?style=flat&logo=thingiverse&logoColor=white)](https://www.thingiverse.com/psp515/designs)
