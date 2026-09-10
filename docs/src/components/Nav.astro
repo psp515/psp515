@@ -1,6 +1,7 @@
 ---
 import type { Lang } from "../data/types";
 import { pages, strings } from "../data/nav";
+import { ui } from "../data/icons";
 import { withBase } from "../lib/paths";
 
 interface Props {
@@ -30,5 +31,21 @@ const currentPath = pages.find((p) => p.slug === current)?.path ?? "";
       <a href={withBase(base, "en", currentPath)} aria-current={String(lang === "en")}>EN</a>
       <a href={withBase(base, "pl", currentPath)} aria-current={String(lang === "pl")}>PL</a>
     </div>
+    <button class="theme" type="button" aria-label={lang === "pl" ? "Zmień motyw" : "Switch theme"}>
+      <svg class="sun" viewBox="0 0 24 24" aria-hidden="true" set:html={ui.sun} />
+      <svg class="moon" viewBox="0 0 24 24" aria-hidden="true" set:html={ui.moon} />
+    </button>
   </div>
 </nav>
+
+<script is:inline>
+  document.querySelector(".theme")?.addEventListener("click", () => {
+    const root = document.documentElement;
+    // computed color-scheme covers all three states: stored pick, OS preference, default dark
+    const next = getComputedStyle(root).colorScheme.includes("dark") ? "light" : "dark";
+    root.dataset.theme = next;
+    try {
+      localStorage.setItem("psp515-theme", next);
+    } catch (e) {}
+  });
+</script>

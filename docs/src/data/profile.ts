@@ -83,8 +83,8 @@ export const projectsHead: { title: I18n; sub: I18n } = {
 export const studiesHead: { title: I18n; sub: I18n } = {
   title: { en: "Studies", pl: "Projekty ze studiów" },
   sub: {
-    en: "AGH coursework, one subject per repository",
-    pl: "kursy AGH, jeden przedmiot = jedno repozytorium",
+    en: "AGH UST and WUT coursework, one subject per repository",
+    pl: "kursy AGH oraz PW, jeden przedmiot = jedno repozytorium",
   },
 };
 

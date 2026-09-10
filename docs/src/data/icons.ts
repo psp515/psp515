@@ -43,6 +43,14 @@ export const account = {
 
 export type AccountKey = keyof typeof account;
 
+/** UI glyphs — stroked like the backdrop art, viewBox is always 0 0 24 24. */
+export const ui = {
+  sun: `<circle cx="12" cy="12" r="4.2"/><path d="M12 2.6v2.4M12 19v2.4M2.6 12H5M19 12h2.4M5.6 5.6l1.7 1.7M16.7 16.7l1.7 1.7M18.4 5.6l-1.7 1.7M7.3 16.7l-1.7 1.7"/>`,
+  moon: `<path d="M20.5 14.3A8.6 8.6 0 0 1 9.7 3.5a8.6 8.6 0 1 0 10.8 10.8z"/>`,
+} as const;
+
+export type UiKey = keyof typeof ui;
+
 /** Off-hours icons — viewBox matches the backdrop shape they mirror. */
 export const hobby = {
   asg: backdrop.asg,
