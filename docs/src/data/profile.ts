@@ -6,7 +6,7 @@ export const eyebrow: I18n = {
 };
 
 export const heroLead: I18n = {
-  en: "building backends and things that like to",
+  en: "I build backends and things that like to",
   pl: "buduję backendy i rzeczy, które lubią",
 };
 
@@ -16,8 +16,8 @@ export const heroBlink: I18n = {
 };
 
 export const lede: I18n = {
-  en: "Software Engineer at Dassault Systèmes. C# and .NET on the cloud by day; ASG, MQTT, microcontrollers and a 3D printer by night.",
-  pl: "Software Engineer w Dassault Systèmes. Za dnia C# i .NET na chmurze; po godzinach MQTT, ASG, mikrokontrolery i drukarka 3D.",
+  en: "I'm a software engineer at Dassault Systèmes. C# and .NET in the cloud during the day; airsoft, MQTT, microcontrollers and a 3D printer after hours.",
+  pl: "Jestem programistą w Dassault Systèmes. W dzień C# i .NET w chmurze; po godzinach ASG, MQTT, mikrokontrolery i drukarka 3D.",
 };
 
 export const status: { dt: I18n; dd: I18n }[] = [
@@ -28,8 +28,8 @@ export const status: { dt: I18n; dd: I18n }[] = [
   {
     dt: { en: "Studying", pl: "Studia" },
     dd: {
-      en: "Computer Science MSc — Warsaw Univ. of Technology",
-      pl: "Informatyka, mgr — Politechnika Warszawska",
+      en: "CS master's — Warsaw University of Technology",
+      pl: "Informatyka, magisterka — Politechnika Warszawska",
     },
   },
   {
@@ -62,8 +62,8 @@ export const accounts: Account[] = [
 export const offHoursHead: { title: I18n; sub: I18n } = {
   title: { en: "Off hours", pl: "Po godzinach" },
   sub: {
-    en: "what happens away from a screen",
-    pl: "co robię, kiedy nie ma ekranu",
+    en: "what I do away from a screen",
+    pl: "co robię z dala od ekranu",
   },
 };
 
@@ -75,16 +75,16 @@ export const timelineHead: { title: I18n; sub: I18n } = {
 export const projectsHead: { title: I18n; sub: I18n } = {
   title: { en: "Projects", pl: "Projekty" },
   sub: {
-    en: "things that run outside my desk",
-    pl: "rzeczy, które działają poza moim biurkiem",
+    en: "things I built that run somewhere other than my desk",
+    pl: "rzeczy, które zbudowałem i które działają gdzieś poza moim biurkiem",
   },
 };
 
 export const studiesHead: { title: I18n; sub: I18n } = {
   title: { en: "Studies", pl: "Projekty ze studiów" },
   sub: {
-    en: "AGH UST and WUT coursework, one subject per repository",
-    pl: "kursy AGH oraz PW, jeden przedmiot = jedno repozytorium",
+    en: "coursework from AGH and WUT — one subject per repo",
+    pl: "zaliczenia z AGH i PW — jeden przedmiot, jedno repo",
   },
 };
 
