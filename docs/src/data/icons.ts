@@ -7,19 +7,19 @@
 export const backdrop = {
   bike: {
     viewBox: "0 0 100 70",
-    body: `<circle cx="19" cy="48" r="16"/><circle cx="79" cy="48" r="16"/><path d="M19 48 38 20h22M38 20l22 28M60 48H79M60 48 52 30h-9M33 20h10"/><path d="M52 30h14"/>`,
+    body: `<circle cx="20" cy="46" r="16"/><circle cx="80" cy="46" r="16"/><path d="M20 46h26l-8-22 26-2 16 24M46 46 64 22M38 24 20 46"/><path d="M38 24 36 19M41 18 30 20"/><path d="M64 22 61 15 53 16"/>`,
   },
   print: {
     viewBox: "0 0 90 90",
-    body: `<rect x="8" y="10" width="74" height="70" rx="4"/><path d="M8 30h74M40 30v13M31 43h18l-5 10h-8z"/><path d="M18 68h54"/><path d="M18 10V4M72 10V4"/>`,
+    body: `<rect x="8" y="9" width="74" height="73" rx="4"/><path d="M8 27h74M39 27v6h12v-6M45 33v4"/><path d="M45 44 58 51 45 58 32 51z"/><path d="M32 51v10l13 7 13-7v-10M45 58v11"/><path d="M18 72h54"/><path d="M21 9V3M69 9V3"/>`,
   },
   ball: {
     viewBox: "0 0 90 90",
-    body: `<circle cx="45" cy="45" r="32"/><path d="M45 25l16 12-6 19H35l-6-19z"/><path d="M45 13v12M13 37l16 8M77 37l-16 8M27 74l8-18M63 74l-8-18"/>`,
+    body: `<circle cx="45" cy="45" r="32"/><path d="M45 29 60 40 54 58 36 58 30 40Z"/><path d="M45 29V13M60 40 75 35M54 58 63 71M36 58 27 71M30 40 15 35"/>`,
   },
   asg: {
-    viewBox: "0 0 130 60",
-    body: `<path d="M8 28h18l8-8h34l6 8h48"/><path d="M122 28v7h-14"/><path d="M40 20v-6h20v6"/><rect x="46" y="8" width="26" height="7" rx="2"/><path d="M50 36v14l-6 6"/><path d="M74 28v10h10"/><path d="M8 28v7h14"/>`,
+    viewBox: "0 0 90 90",
+    body: `<circle cx="45" cy="45" r="24"/><circle cx="45" cy="45" r="11"/><path d="M45 10v20M45 80V60M10 45h20M80 45H60"/><circle cx="45" cy="45" r="3.6" fill="currentColor"/>`,
   },
   led: {
     viewBox: "0 0 120 60",
