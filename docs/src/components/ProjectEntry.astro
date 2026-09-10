@@ -4,10 +4,16 @@ import type { Lang, Project } from "../data/types";
 interface Props {
   project: Project;
   lang: Lang;
+  delay?: number;
 }
-const { project, lang } = Astro.props;
+const { project, lang, delay = 0 } = Astro.props;
 ---
-<div class:list={["row", { right: project.side === "right" }]} data-kind="project">
+<div
+  class:list={["row", { right: project.side === "right" }]}
+  data-kind="project"
+  data-reveal
+  style={`--d:${delay}ms`}
+>
   <span class="dot"></span>
   <div class:list={["card", { framed: !project.minimal }]}>
     <div class="kick-row">

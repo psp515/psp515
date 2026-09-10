@@ -4,12 +4,18 @@ import type { Lang, TimelineEntry } from "../data/types";
 interface Props {
   entry: TimelineEntry;
   lang: Lang;
+  delay?: number;
 }
-const { entry, lang } = Astro.props;
+const { entry, lang, delay = 0 } = Astro.props;
 const cardClass = entry.framed ? "card framed" : "card";
 ---
 
-<div class:list={["row", { right: entry.side === "right" }]} data-kind={entry.kind}>
+<div
+  class:list={["row", { right: entry.side === "right" }]}
+  data-kind={entry.kind}
+  data-reveal
+  style={`--d:${delay}ms`}
+>
   <span class="dot"></span>
   <div class={cardClass}>
     <div class="head">
@@ -23,6 +29,11 @@ const cardClass = entry.framed ? "card framed" : "card";
     {entry.chips && (
       <div class="chiprow">
         {entry.chips.map((c) => <span class="chip">{c}</span>)}
+      </div>
+    )}
+    {entry.links && (
+      <div class="links">
+        {entry.links.map((l) => <a href={l.href}>{l.label[lang]}</a>)}
       </div>
     )}
   </div>

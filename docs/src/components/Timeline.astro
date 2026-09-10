@@ -3,6 +3,7 @@ import type { Lang } from "../data/types";
 import { timeline } from "../data/timeline";
 import { timelineHead } from "../data/profile";
 import TimelineEntry from "./TimelineEntry.astro";
+import Reveal from "./Reveal.astro";
 
 interface Props {
   lang: Lang;
@@ -10,9 +11,10 @@ interface Props {
 const { lang } = Astro.props;
 
 let lastYear: number | null = null;
+let step = 0;
 ---
 
-<section>
+<section id="timeline">
   <div class="sec-head">
     <h2>{timelineHead.title[lang]}</h2>
     <p>{timelineHead.sub[lang]}</p>
@@ -22,16 +24,20 @@ let lastYear: number | null = null;
     {timeline.map((entry) => {
       const showYear = entry.year !== lastYear;
       lastYear = entry.year;
+      const yearDelay = showYear ? (step++ % 3) * 70 : 0;
+      const entryDelay = (step++ % 3) * 70;
       return (
         <>
           {showYear && (
-            <div class:list={["ymark", { "is-now": entry.isNow }]}>
+            <div class:list={["ymark", { "is-now": entry.isNow }]} data-reveal style={`--d:${yearDelay}ms`}>
               <span>{entry.year}</span>
             </div>
           )}
-          <TimelineEntry entry={entry} lang={lang} />
+          <TimelineEntry entry={entry} lang={lang} delay={entryDelay} />
         </>
       );
     })}
   </div>
 </section>
+
+<Reveal />

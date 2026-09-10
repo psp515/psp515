@@ -69,7 +69,7 @@ export const offHoursHead: { title: I18n; sub: I18n } = {
 
 export const timelineHead: { title: I18n; sub: I18n } = {
   title: { en: "Timeline", pl: "Oś czasu" },
-  sub: { en: "2021 — today", pl: "2021 — dziś" },
+  sub: { en: "2018 — today", pl: "2018 — dziś" },
 };
 
 export const projectsHead: { title: I18n; sub: I18n } = {

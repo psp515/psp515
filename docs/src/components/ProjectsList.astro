@@ -3,6 +3,7 @@ import type { Lang } from "../data/types";
 import { projects } from "../data/projects";
 import { projectsHead } from "../data/profile";
 import ProjectEntry from "./ProjectEntry.astro";
+import Reveal from "./Reveal.astro";
 
 interface Props {
   lang: Lang;
@@ -10,6 +11,7 @@ interface Props {
 const { lang } = Astro.props;
 
 let lastYear: number | null = null;
+let step = 0;
 ---
 
 <div class="page-head sec-head">
@@ -21,15 +23,19 @@ let lastYear: number | null = null;
   {projects.map((p) => {
     const showYear = p.year !== lastYear;
     lastYear = p.year;
+    const yearDelay = showYear ? (step++ % 3) * 70 : 0;
+    const entryDelay = (step++ % 3) * 70;
     return (
       <>
         {showYear && (
-          <div class:list={["ymark", { "is-now": p.isNow }]}>
+          <div class:list={["ymark", { "is-now": p.isNow }]} data-reveal style={`--d:${yearDelay}ms`}>
             <span>{p.year}</span>
           </div>
         )}
-        <ProjectEntry project={p} lang={lang} />
+        <ProjectEntry project={p} lang={lang} delay={entryDelay} />
       </>
     );
   })}
 </div>
+
+<Reveal />

@@ -51,4 +51,8 @@ const { lang } = Astro.props;
       </div>
     ))}
   </dl>
+  <a class="cue" href="#timeline" aria-label={lang === "pl" ? "Przejdź do osi czasu" : "Skip to the timeline"}>
+    <span>{lang === "pl" ? "przewiń" : "scroll"}</span>
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v14M6 13l6 6 6-6" /></svg>
+  </a>
 </header>

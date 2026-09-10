@@ -2,6 +2,51 @@ import type { TimelineEntry } from "./types";
 
 export const timeline: TimelineEntry[] = [
   {
+    year: 2018,
+    side: "left",
+    kind: "life",
+    topic: "life/first-book",
+    when: { en: "where it started", pl: "tu się zaczęło" },
+    title: { en: "First encounter with programming", pl: "Pierwsze kroki z programowaniem" },
+    org: { en: "Marcin Lis · Helion", pl: "Marcin Lis · Helion" },
+    text: {
+      en: "C#. Praktyczny kurs — read cover to cover, with every example typed out by hand. The first time code stopped being magic: variables, loops, classes, and small console programs that actually ran.",
+      pl: "„C#. Praktyczny kurs” — przeczytana od deski do deski, z każdym przykładem przepisanym ręcznie. Wtedy kod przestał być magią: zmienne, pętle, klasy i małe programy konsolowe, które naprawdę działały.",
+    },
+    quote: {
+      en: "The point where I decided to take the first steps towards becoming a programmer.",
+      pl: "Moment, w którym postanowiłem zrobić pierwsze kroki w stronę zostania programistą.",
+    },
+    chips: ["C#"],
+    framed: true,
+    links: [
+      {
+        label: { en: "the book ↗", pl: "książka ↗" },
+        href: "https://helion.pl/ksiazki/c-praktyczny-kurs-wydanie-iii-marcin-lis,cshpk3.htm",
+      },
+    ],
+  },
+  {
+    year: 2020,
+    side: "right",
+    kind: "project",
+    topic: "life/github/signup",
+    when: { en: "08 · account created", pl: "08 · założone konto" },
+    title: { en: "GitHub account", pl: "Konto na GitHubie" },
+    org: { en: "github.com/psp515", pl: "github.com/psp515" },
+    text: {
+      en: "Signed up and started pushing: coursework, exercises and half-finished experiments. Everything after this point on the timeline has a commit history behind it.",
+      pl: "Rejestracja i pierwsze pushe: zadania ze studiów, ćwiczenia i niedokończone eksperymenty. Wszystko dalej na tej osi ma już za sobą historię commitów.",
+    },
+    chips: ["git"],
+    links: [
+      {
+        label: { en: "profile ↗", pl: "profil ↗" },
+        href: "https://github.com/psp515",
+      },
+    ],
+  },
+  {
     year: 2021,
     side: "left",
     kind: "work",
@@ -28,6 +73,7 @@ export const timeline: TimelineEntry[] = [
       pl: "Trzy i pół roku: od programowania imperatywnego w C, przez bazy danych i systemy operacyjne, po metody obliczeniowe i podstawy sztucznej inteligencji.",
     },
     chips: ["C", "Java", "Python", "T-SQL"],
+    framed: true,
   },
   {
     year: 2022,

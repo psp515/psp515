@@ -1,0 +1,28 @@
+---
+/**
+ * Scroll reveal for any `.spine` on the page: entries fade/slide in as they
+ * enter the viewport and back out when they leave, in both directions.
+ * Render once per page that has a spine.
+ */
+---
+
+<script>
+  const spines = Array.from(document.querySelectorAll<HTMLElement>(".spine"));
+  const motionOk = window.matchMedia("(prefers-reduced-motion: no-preference)").matches;
+
+  if (spines.length && motionOk && "IntersectionObserver" in window) {
+    const io = new IntersectionObserver(
+      (entries) => {
+        for (const e of entries) e.target.classList.toggle("is-in", e.isIntersecting);
+      },
+      { rootMargin: "-8% 0px -14% 0px", threshold: 0.1 },
+    );
+
+    for (const spine of spines) {
+      const items = spine.querySelectorAll<HTMLElement>("[data-reveal]");
+      if (!items.length) continue;
+      spine.classList.add("reveal-on");
+      for (const el of items) io.observe(el);
+    }
+  }
+</script>

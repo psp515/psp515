@@ -31,6 +31,7 @@ export interface TimelineEntry {
   text: I18n;
   quote?: I18n;
   chips?: string[];
+  links?: Link[];
   framed?: boolean;
   isNow?: boolean;
 }
