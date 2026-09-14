@@ -19,7 +19,7 @@ Kraków · .NET · Software Engineer
 [![Stars](https://img.shields.io/github/stars/psp515?style=flat&logo=github&label=Stars)](https://github.com/psp515?tab=repositories)
 [![Public repos](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.github.com%2Fusers%2Fpsp515&query=%24.public_repos&style=flat&logo=github&label=Public%20repos)](https://github.com/psp515?tab=repositories)
 [![Last commit](https://img.shields.io/github/last-commit/psp515/psp515?style=flat&logo=github&label=Last%20commit)](https://github.com/psp515/psp515/commits)
-[![Stars given](https://img.shields.io/badge/Stars_given-112-DEA584?style=flat&logo=github&logoColor=white)](https://github.com/psp515?tab=stars)
+[![Stars given](https://img.shields.io/badge/Stars_given-113-DEA584?style=flat&logo=github&logoColor=white)](https://github.com/psp515?tab=stars)
 ![Visitors](https://komarev.com/ghpvc/?username=psp515&color=green&style=flat&label=Visitors)
 
 </div>
